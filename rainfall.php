@@ -50,15 +50,9 @@
     if (($handle = fopen("data/$station_file_name.csv", "r")) !== FALSE) {
         while (($data = fgetcsv($handle, 1000, ",", escape: "")) !== FALSE) {
             if ($row++ == 0) {
-                // Skip the header row
                 continue;
             }
             $row++;
-            // Process each row of data
-            // For example, you can print the station name and item date
-            // $rain_mm = floatval($data[1]);
-            // $rain_mm_bar = $rain_mm * 1;
-            // split
             $date_parts = explode(" ", $data[0]);
             $month = $date_parts[0];
             $year = $date_parts[1];
@@ -68,7 +62,6 @@
         $current_month = date("M");
         $months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-        // reverse every list in results by month
         foreach ($months as $month) {
             $years = $results_by_month[$month];
             $full_month_name = date("F", strtotime($month));
