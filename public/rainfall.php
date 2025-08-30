@@ -34,7 +34,7 @@
         exit();
     }
     $title = "Rainfall Data for " . $station;
-    include "../includes/nav.php";
+    include "./includes/nav.php";
     echo "<h1>$title</h1>";
     ?>
     <main>

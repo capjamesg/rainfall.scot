@@ -3,7 +3,7 @@
 <?php include "includes/head.html" ?>
 <body>
     <?php $title = "All Stations";
-        include "../includes/nav.php"; ?>
+        include "./includes/nav.php"; ?>
     <section id="home">
         <h1>rainfall.scot</h1>
         <p>Search for rainfall by month at your nearest station:</p>
