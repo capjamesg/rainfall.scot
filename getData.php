@@ -27,7 +27,8 @@ foreach ($station_list as $station => $values) {
     if (!is_dir("data")) {
         mkdir("data", 0777, true);
     }
-    file_put_contents("data/$station_name.csv", $station_data);
+    file_put_contents("/var/www/rainfall.scot/public/$station_name.csv", $station_data);
     // break;
 }
+file_put_contents("/var/www/rainfall.scot/public/updated.txt", date("Y-m-d H:i:s"));
 ?>

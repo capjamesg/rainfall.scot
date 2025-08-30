@@ -30,6 +30,6 @@
             ?>
         </ul>
     </section>
-    <?php include "./includes/footer.html" ?>
+    <?php include "./includes/footer.php" ?>
 </body>
 </html>

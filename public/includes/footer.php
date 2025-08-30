@@ -1,4 +1,5 @@
 <footer>
     <p>Data sourced from the <a href="https://www2.sepa.org.uk/rainfall/DataDownload">Scottish Environment Protection Agency (SEPA)</a>. This site has no affiliation with SEPA.</p>
     <p>Made with 💜 by <a href="https://jamesg.blog">capjamesg</a>. <a href="https://github.com/capjamesg/rainfall.scot">View source</a>.</p>
+    <p>Last updated: <?php echo file_get_contents(__DIR__ . "/../updated.txt"); ?></p>
 </footer>

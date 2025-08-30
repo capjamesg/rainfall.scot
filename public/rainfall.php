@@ -81,7 +81,7 @@
             if ($month == $current_month) {
                 $color = "#cfc";
             }
-            echo "<div" . ($color != "white" ? "class='current-month'" : "") . "><h3>$full_month_name</h3>";
+            echo "<div " . ($color != "white" ? "class='current-month'" : "") . "><h3>$full_month_name</h3>";
             echo "<table><thead><tr><th>Year</th><th>Rainfall (mm)</th></tr></thead><tbody>";
             $years = array_reverse($years, preserve_keys: true);
             $years = array_slice($years, 0, 5, preserve_keys: true);
@@ -95,6 +95,6 @@
     }
     ?>
     </main>
-    <?php include "./includes/footer.html" ?>
+    <?php include "./includes/footer.php" ?>
 </body>
 </html>
