@@ -6,16 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('keyup', function() {
         let listItems = document.querySelectorAll('#home ul li');
 
-        let searchValue = searchInput.value.toLowerCase();
+        let searchValue = searchInput.value.toLocaleLowerCase();
 
         listItems.forEach(function(article) {
 
-            var textContent = article.textContent.toLowerCase();
-            var hrefLinks = article.querySelectorAll('a[href]');
-            hrefLinks.forEach(function(link) {
-                textContent += link.getAttribute('href').toLowerCase();
-                textContent += ' ' + link.getAttribute('href').replace('_', '').replace('-', '').toLowerCase();
-            });
+            const textContent = article.textContent.toLocaleLowerCase();
 
             if (textContent.indexOf(searchValue) === -1) {
                 article.style.display = 'none';
