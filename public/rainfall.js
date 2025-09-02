@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('keyup', function() {
         let listItems = document.querySelectorAll('#home ul li');
 
-        let searchValue = searchInput.value.toLowerCase();
+        let searchValue = searchInput.value.toLocaleLowerCase();
 
         listItems.forEach(function(article) {
 
